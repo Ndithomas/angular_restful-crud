@@ -1,0 +1,28 @@
+<div *ngIf="post; else loading" class="container mt-4">
+  <h2 class="mb-4">Update Post</h2>
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input id="title" [(ngModel)]="post.title" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label for="body" class="form-label">Body:</label>
+    <textarea id="body" [(ngModel)]="post.body" class="form-control" rows="5"></textarea>
+  </div>
+
+  <button (click)="updatePost()" class="btn btn-success">Update Post</button>
+
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    <p>{{ successMessage }}</p>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    <p>Error: {{ errorMessage }}</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="container mt-4">
+    <p>Loading post...</p>
+  </div>
+</ng-template>

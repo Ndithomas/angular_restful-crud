@@ -1,0 +1,17 @@
+.bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .nav-link.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .nav-link {
+    margin-bottom: 5px;
+  }
+.sidebar{
+  position: fixed;
+  
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,45 @@
+footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 2.5rem 0;
+    margin-left: 300px;
+  }
+  
+  footer h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  footer .small {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  footer a {
+    color: #333;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  footer a:hover {
+    color: #007bff;
+  }
+  
+  footer .bi {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  footer .bi:hover {
+    color: #007bff;
+  }
+  
+  footer hr {
+    border-top: 1px solid #333;
+  }
+  
+  @media (max-width: 767px) {
+    footer .col-md-4 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  

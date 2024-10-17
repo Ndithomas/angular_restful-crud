@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h1 class="text-center">Create New Post</h1>
+<a href="" routerLink="listing" class="btn btn-success">back</a>
+<form [formGroup]="postForm" (ngSubmit)="submit()">
+<div class="form-group">
+  <label for="title">Title:</label>
+  <input id="title" formControlName="title" type="text" class="form-control">
+  
+  <label for="title">Body:</label>
+  <input id="body" formControlName="body" type="text" class="form-control">
+  
+  <label for="title">User Id:</label>
+  <input id="userId" formControlName="userId" type="text" class="form-control">
+  
+</div>
+<button class="btn btn-success" type="submit" [disabled]="!postForm.valid">Create</button>
+</form>
+
+<div *ngIf="successMessage" class="alert alert-success mt-3 " style="width: 50%;  margin: 20px auto;">
+  <p>{{ successMessage }}</p>
+</div>
+</div>

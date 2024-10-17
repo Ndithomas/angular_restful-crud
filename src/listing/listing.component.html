@@ -1,0 +1,51 @@
+ <!-- <div style="text-align:center">
+    <div *ngIf="posts.length > 0">
+      <h2>Posts List:</h2>
+      
+        <div *ngFor="let post of posts" class="alert alert-primary mt-3" >
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.body }}</p>
+        </div>
+      
+    </div> 
+     -->
+     <div class="container">
+
+      <h1>Post List</h1>
+  
+    
+  
+  
+      
+  
+      <table class="table table-bordered">
+  
+        <tr>
+  
+          <th>ID</th>
+  
+          <th>Title</th>
+  
+          <th>Body</th>
+  
+          
+  
+        </tr>
+  
+        <tr *ngFor="let post of posts" >
+  
+          <td class="alert alert-success">{{ post.id }}</td>
+  
+          <td class="alert alert-success">{{ post.title }}</td>
+  
+          <td class="alert alert-success">{{ post.body }}</td>
+  
+          <td>
+  
+           
+  
+          </td>
+  
+        </tr>
+  
+      </table>

@@ -1,0 +1,50 @@
+<div class="main">
+  <nav class="navbar  bg-body-tertiary">
+    <div class="d-flex flex-grow-1 justify-content-center">
+      <form class="d-flex" (ngSubmit)="searchPost()">
+        <div class="input-group">
+
+          <input type="number" id="postId" class="form-control" placeholder="Search Post by ID" aria-label="Search"
+            [(ngModel)]="postId" name="postId">
+          <button type="submit" class="btn btn-outline-success">Search</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  <router-outlet />
+
+
+  <div *ngIf="post" class="container alert alert-success mt-3" role="alert">
+    <div>
+      <strong>ID:</strong>
+      <p>{{ post.id }}</p>
+  </div>
+  <div>
+      <strong>Title:</strong>
+      <p>{{ post.title }}</p>
+  </div>
+  <div>
+      <strong>Body:</strong>
+      <p>{{ post.body }}</p>
+  </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center" role="alert">
+    {{ errorMessage }}
+  </div>
+
+
+  <div class="container-fluid bg-image text-center p-3 h-auto">
+    <h1 class="fw-lighter " style="font-size: 80px; color: #f83198 ;">CRUD APP</h1>
+    <p class="fs-1  fw-normal badge text-wrap" style="color:rgb(207, 21, 21); ">An Innovative Web Application
+      used for practicing and implementing APIs.
+    </p>
+    <div class="p-5">
+      <img src="google-play.png" alt="" style="height: 50px;  width: 200px;" class="me-4">
+      <img src="app-store.png" alt="" style="height: 50px;  width: 200px;">
+    </div>
+  </div>
+
+
+  <canvas class="my-4 w-100" id="myChart" width="900" height="40"></canvas>
+</div>
